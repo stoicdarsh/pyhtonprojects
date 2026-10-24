@@ -6,8 +6,8 @@ for i in range(attempt):
     if pin==c_pin:
         break
     else:
-            print("Wrong Pin")
-            print(f"{attempt-(i+1)} Attempt Left")
+        print("Wrong Pin")
+        print(f"{attempt-(i+1)} Attempt Left")
 else:
     print("Card Blocked")
 if c_pin==pin:
@@ -20,14 +20,14 @@ if c_pin==pin:
         elif option==1:
             print("Balance:",balance)
         elif option==2:
-            deposit=float(input("Enter Deposit Momey: "))
+            deposit=float(input("Enter Deposit Money: "))
             balance+=deposit
             print("Balance:",balance)
         elif option==3:
             while True:
                 withdraw=float(input("Enter Withdraw: "))
                 if withdraw>balance:
-                    print("That much AMount is not Available\n provide from the limited balance...")
+                    print("That much Amount is not Available\n provide from the Limited Balance...")
                 else:
                     balance-=withdraw
                     print("Balance:",balance)
