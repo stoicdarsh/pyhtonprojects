@@ -17,3 +17,22 @@ def count_even_odd(numbers):
             odd+=1
     return even,odd
 print(count_even_odd([1,2,3,4,5]))
+
+#3 Largest and smallest
+def find_min_max(data):
+    length=len(data)
+    if data[0]<=data[1]:
+        min=data[0]
+        max=data[1]
+    else:
+        max=data[0]
+        min=data[1]
+    for i in range(2,length):
+        if data[i]>=max:
+            max=data[i]
+        if data[i]<=min:
+            min=data[i]
+    return min,max
+print(find_min_max([9,4,2,7]))
+
+#4 remove duplicate
