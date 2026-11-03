@@ -68,3 +68,31 @@ def get_grade(marks_dict):
             new_dict[key]="Fail"
     return new_dict
 print(get_grade({"Ravi": 85, "Sita": 62, "Amit": 38}))
+
+#8 Default Argument
+def power(base,exponent=2):
+    return base**exponent
+print(power(2,3))
+
+#9 Keyword Argument
+def student_info(name,age,city="Lucknow"):
+    return f"Name: {name.title()}, Age: {age}, City: {city.title()}"
+print(student_info("Darshan", 19, "Uttar pradesh"))
+print(student_info(age=19,city="Delhi",name="Nitin"))
+print(student_info("Shubham", 19))
+
+#10 Combined Challenges
+def analyze_scores(students):
+    records={"passed":[],"failed":[],"topper":None}
+    for key, val in students:
+        marks=[]
+        names=[]
+        marks.append(val)
+        names.append(key)
+        if val>=40:
+            records["passed"].append(key)
+        else:
+            records["failed"].append(key)
+    records["topper"]=f"{names[marks.index(max(marks))]}"
+    return records
+print(analyze_scores([("Ravi", 85), ("Sita", 62), ("Amit", 38)]))
