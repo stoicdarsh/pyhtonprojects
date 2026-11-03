@@ -35,4 +35,36 @@ def find_min_max(data):
     return min,max
 print(find_min_max([9,4,2,7]))
 
-#4 remove duplicate
+#4 Remove Duplicates
+def unique_items(items):
+    return list(set(items))
+print(unique_items([1,2,2,3,3,3]))
+
+#5 Common Elements
+def common_elements(set1,set2):
+    return set1 & set2
+print(common_elements({1,2,3},{2,3,4}))
+
+#6 Word Frequency
+def word_count(sentence):
+    data=sentence.split()
+    dic={}
+    for i in data:
+        dic[i]=data.count(i)
+    return dic
+print(word_count("to be or not to be"))
+
+#7 Student Grade
+def get_grade(marks_dict):
+    new_dict={}
+    for key,val in marks_dict.items():
+        if val>=80:
+            new_dict[key]="A"
+        elif val>=60:
+            new_dict[key]="B"
+        elif val>=40:
+            new_dict[key]="C"
+        else:
+            new_dict[key]="Fail"
+    return new_dict
+print(get_grade({"Ravi": 85, "Sita": 62, "Amit": 38}))
